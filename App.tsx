@@ -4,7 +4,9 @@ import { TamaguiProvider, YStack } from "tamagui";
 import config from "./tamagui.config";
 
 import { HomeScreen } from "@screens/Home";
-import { LoadingHomePage } from "@screens/Home/components/LoadingHomePage";
+import { LoadingHomePage } from "@components/Loading";
+import { Routes } from "@routes/index";
+import { StatusBar } from "react-native";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -14,7 +16,8 @@ export default function App() {
 
   return (
     <TamaguiProvider config={config}>
-      {fontsLoaded ? <HomeScreen /> : <LoadingHomePage />}
+      <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
+      {fontsLoaded ? <Routes /> : <LoadingHomePage />}
     </TamaguiProvider>
   );
 }
