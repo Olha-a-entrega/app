@@ -6,7 +6,7 @@ import { Button } from "@components/Button";
 import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
 
-export function SignInDriver() {
+export function SignInCompany() {
   const navigation = useNavigation<AuthNavigatorRoutesProps>();
 
   return (
@@ -46,11 +46,9 @@ export function SignInDriver() {
               Ainda não tem acesso?
             </Text>
             <YStack space="$size.1">
-              <Button background="outline" onPress={() => navigation.navigate("signUpDriver")}>
-                Criar conta
-              </Button>
-              <Button onPress={() => navigation.navigate("signInCompany")}>
-                Sou uma empresa
+              <Button background="outline">Criar conta</Button>
+              <Button onPress={() => navigation.navigate("signInDriver")}>
+                Sou um motorista
               </Button>
             </YStack>
           </YStack>

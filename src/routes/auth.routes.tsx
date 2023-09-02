@@ -2,7 +2,8 @@ import {
   NativeStackNavigationProp,
   createNativeStackNavigator,
 } from "@react-navigation/native-stack";
-import { SignInDriver } from "@screens/Driver/signIn";
+import { SignInDriver } from "@screens/Driver/SignIn";
+import { SignInCompany } from "@screens/Company/SignIn";
 import { HomeScreen } from "@screens/Home";
 
 type AuthRoutes = {
@@ -22,6 +23,7 @@ export function AuthRoutes() {
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen name="home" component={HomeScreen} />
       <Screen name="signInDriver" component={SignInDriver} />
+      <Screen name="signInCompany" component={SignInCompany} />
     </Navigator>
   );
 }

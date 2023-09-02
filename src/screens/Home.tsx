@@ -13,7 +13,9 @@ export function HomeScreen() {
 
       <YStack space="$4" w="100%">
         <Button onPress={() => navigation.navigate("signInDriver")}> Motorista</Button>
-        <Button background="outline">Empresa</Button>
+        <Button background="outline" onPress={() => navigation.navigate("signInCompany")}>
+          Empresa
+        </Button>
       </YStack>
     </YStack>
   );
